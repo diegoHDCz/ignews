@@ -1,7 +1,7 @@
 import * as prismic from "@prismicio/client";
 import { enableAutoPreviews } from "@prismicio/next";
 import { NextApiRequest, PreviewData } from "next";
-import sm from "./sm.json";
+
 
 interface PrismicContext {
   req?: NextApiRequest;
@@ -12,7 +12,7 @@ interface PrismicResolver {
   [key: string]: any;
 }
 
-export const endpoint = sm.apiEndpoint;
+export const endpoint = 'https://ignewsdoiscz.prismic.io/api/v2';
 export const repositoryName = prismic.getRepositoryName(endpoint);
 
 // Update the Link Resolver to match your project's route structure
